@@ -1,6 +1,6 @@
 export interface Movimentacao {
     tipoSelecionado:string,
-    valorMovientado:string,
+    valorMovimentado:string,
     id:string
 
 }

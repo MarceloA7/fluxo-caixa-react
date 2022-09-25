@@ -24,7 +24,7 @@ const ListaItens = ({listaMovimentacao, filtroSelecionado}:Props) => {
             {novaLista.map((item) => (
                 <li key={item.id} className={ListaItensStyles.listaitens__item}>
                     <h3>{item.tipoSelecionado}</h3>
-                    <span>{`R$ ${item.valorMovientado}`}</span>
+                    <span>{`R$ ${item.valorMovimentado}`}</span>
                 </li>                
             ))}
         </ul>
