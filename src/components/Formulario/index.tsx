@@ -14,25 +14,25 @@ interface Props {
 const Formulario = ({setListaMovimentacao}:Props) => {
 
     const [tiposMovimentacao, setTiposMovimentacao] = useState<Array<TipoMovimentacao>>(tipoMovimentacao);
-    const [valorMovientado, setValorMovimentacao] = useState<string>("0,00")
+    const [valorMovimentado, setValorMovimentacao] = useState<string>("0,00")
     const [tipoSelecionado, setValorSelecionado] = useState<string>(tipoMovimentacao[0].tipo)
 
 
     function adicionarMovimentacao (evento:React.FormEvent) {
         evento.preventDefault();
-        const movimetacao:Movimentacao = {
+        const movimentacao:Movimentacao = {
             tipoSelecionado,
-            valorMovientado,
+            valorMovimentado,
             id:uuidv4()
         }
-        setListaMovimentacao((valorAntigo)=>[...valorAntigo,movimetacao])
+        setListaMovimentacao((valorAntigo)=>[...valorAntigo,movimentacao])
         setValorMovimentacao("");
     }
 
     return (
         <form onSubmit={(evento) => adicionarMovimentacao(evento)}>
             <CampoSelecao label="Tipo" listaSelecao={tiposMovimentacao} setValorSelecionado={setValorSelecionado}/>
-            <CampoValor label="Valor" valorMovientado = {valorMovientado} setValorMovimentacao = {setValorMovimentacao}/>
+            <CampoValor label="Valor" valorMovientado = {valorMovimentado} setValorMovimentacao = {setValorMovimentacao}/>
             <Botao>Adicionar</Botao>
         </form>
     )

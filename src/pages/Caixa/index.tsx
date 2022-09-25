@@ -21,11 +21,11 @@ const Caixa = () => {
         const listaEntrada = listaMovimentacao.filter(movimentacao => movimentacao.tipoSelecionado === 'Entrada');
 
         const totalMovimentacaodoSaida  = listaSaida.reduce(
-            (prevent, element) => prevent + NumberUtils.valorStringEmNumber(element.valorMovientado),0);
+            (prevent, element) => prevent + NumberUtils.valorStringEmNumber(element.valorMovimentado),0);
         const totalMovimentacaoEntrada  = listaEntrada.reduce(
-            (prevent, element) => prevent + NumberUtils.valorStringEmNumber(element.valorMovientado),0);
+            (prevent, element) => prevent + NumberUtils.valorStringEmNumber(element.valorMovimentado),0);
         const totalMovimentacao = listaMovimentacao.reduce(
-            (prevent, element) => prevent + NumberUtils.valorStringEmNumber(element.valorMovientado),0);
+            (prevent, element) => prevent + NumberUtils.valorStringEmNumber(element.valorMovimentado),0);
         
         setTotalSaida(NumberUtils.valorNumberEmBrString(totalMovimentacaodoSaida));
         setTotalEntra(NumberUtils.valorNumberEmBrString(totalMovimentacaoEntrada));
