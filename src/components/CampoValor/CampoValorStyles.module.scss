@@ -1,0 +1,19 @@
+.campoValor {
+    display: flex;
+    flex-direction: column;
+    &__label{
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--cor-1);
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+    &__input{
+        padding: 4px;
+        outline: none;
+        border: none;
+        &:hover{
+            box-shadow: 0px 0px 4px 0px rgba($color: #757575, $alpha: 0.2);  
+        }          
+    }    
+}
